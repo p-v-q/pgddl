@@ -1,5 +1,8 @@
 # pgddl
 
+[![PyPI](https://img.shields.io/pypi/v/pgddl.svg)](https://pypi.org/project/pgddl/)
+[![Python](https://img.shields.io/pypi/pyversions/pgddl.svg)](https://pypi.org/project/pgddl/)
+
 `pgddl` exports a PostgreSQL schema as executable SQL. It inspects PostgreSQL's
 system catalogs directly using psycopg 3 (PostgreSQL 12+); it does **not**
 invoke `pg_dump`.
@@ -9,6 +12,8 @@ invoke `pg_dump`.
 ```console
 python -m pip install pgddl
 ```
+
+Package page: <https://pypi.org/project/pgddl/>
 
 ## Python API
 
