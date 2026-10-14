@@ -83,6 +83,7 @@ FROM pg_catalog.pg_constraint AS con
 JOIN pg_catalog.pg_type AS t ON t.oid = con.contypid
 JOIN pg_catalog.pg_namespace AS n ON n.oid = t.typnamespace
 WHERE n.nspname = ANY(%s)
+  AND con.contype <> 'n'
 ORDER BY n.nspname, t.typname, con.conname
 """
 
@@ -169,6 +170,7 @@ LEFT JOIN pg_catalog.pg_class AS refc ON refc.oid = con.confrelid
 LEFT JOIN pg_catalog.pg_namespace AS refn ON refn.oid = refc.relnamespace
 WHERE n.nspname = ANY(%s)
   AND con.conparentid = 0
+  AND con.contype <> 'n'
 ORDER BY n.nspname, c.relname, con.conname
 """
 

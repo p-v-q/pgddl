@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pgddl"
-version = "0.1.1"
+version = "0.1.2"
 description = "Export PostgreSQL schema definitions as executable SQL."
 readme = "README.md"
 requires-python = ">=3.10"
